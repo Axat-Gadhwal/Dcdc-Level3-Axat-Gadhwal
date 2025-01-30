@@ -171,7 +171,9 @@ The impact of their work was profound, leading to the rapid growth of VLSI techn
 ##### The RTL to GDSII ( Register Transfer Level to Graphic Design System II) design process takes many steps, that are -:
 <br> Synthesis = Synthesis is the process of converting high-level RTL (Register Transfer Level) code written in VHDL or Verilog into a gate-level netlist using EDA tools like Synopsys Design Compiler. It involves optimizing the design for area, speed, and power while mapping it to specific technology libraries. The output is a gate-level netlist that serves as the foundation for physical design and further verification steps.
 
-<img src="">
+<img src="https://github.com/Axat-Gadhwal/images/blob/main/Screenshot%20(180).png?raw=true">
+
+<br>An RTL model, which stands for "Register Transfer Level" model, is a design abstraction used in digital circuit design to describe the behavior of a circuit by focusing on the flow of data between registers and the logical operations performed on that data
 </details>
 
 
