@@ -40,13 +40,19 @@ This repo is created by Axat Gadhwal of grade 7th of APS Varanasi.
 </details>
 <details>
   <summary>Lecture 2 - Introduction to Risc-V Architecture</summary>
-   
-  ## RISC-V is an open standard instruction set architecture (ISA) based on reduced instruction set computing (RISC) principles. Key features include:
+ 
+  ### Lets understand 
+
+  <img src="
+  
+  #### RISC-V is an open standard instruction set architecture (ISA) based on reduced instruction set computing (RISC) principles. Key features include:
 
 <br>Open Standard: Free to use and modify, promoting innovation.
 <br>Simplicity: A small set of simple instructions for efficient execution.
 <br>Modular Design: Base instruction set with optional extensions for customization.
 <br>Scalability: Suitable for applications ranging from low-power embedded systems to high-performance computing.
+
+ 
 
 
 
