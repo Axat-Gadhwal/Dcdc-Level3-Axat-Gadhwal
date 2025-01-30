@@ -14,7 +14,7 @@ This repo is created by Axat Gadhwal of grade 7th of APS Varanasi.
 
 #### Understanding the structure of The microprocesser chip through a diagram
 
-<img src="C:\Users\hp\Pictures\Axat.png" width="800" height="500">
+<img src="https://raw.githubusercontent.com/Axat-Gadhwal/Dcdc-Level3-Axat-Gadhwal/refs/heads/main/Axat.png">
 
  </details>
   
