@@ -152,11 +152,20 @@ The impact of their work was profound, leading to the rapid growth of VLSI techn
 
 <br>130 nm chips are also not slow, as verified by intel and OSU-:
 
-<img src=
-
+<img src="https://github.com/Axat-Gadhwal/images/blob/main/Screenshot%20(178).png?raw=true" height ="600" width = 700>
 
 
 </details>
+
+<details>
+  <summary>Lecture 2 - Simplified RTL to GDSII Flow </summary>
+
+  ### Simplified RTL to GDSII Flow
+
+  <br> 
+
+</details>
+
 
 </details>
 
