@@ -41,9 +41,18 @@ This repo is created by Axat Gadhwal of grade 7th of APS Varanasi.
 <details>
   <summary>Lecture 2 - Introduction to Risc-V Architecture</summary>
  
-  ### Lets understand 
+  ### Risc-V Instruction Set Architecture(ISA)
 
-  <img src="
+  <img src="https://github.com/Axat-Gadhwal/images/blob/main/Risc-V%20Architecture.png?raw=true">
+
+  <br> The meaning/explanation of the different things in this diagram are=-
+  <br>1.Risc-V Architecture = It is basically a Clanguage program that consists all the codes. It is like the base[also called"neev" in Hindi] of risc-V.
+  <br>2.Layout = It is the interior of the chip. Like codes but not in written forms!
+
+  ##### Both of these processes give us the desired output...
+
+  <br>But in-between this process, one thing is required as a medium. The medium for getting output is picorv 32a.
+  ###### We can understand this by the following line "The Risc-V Architecture is a specification which gets implemented by the medium{picorv 32a} and gives us the output..
   
   #### RISC-V is an open standard instruction set architecture (ISA) based on reduced instruction set computing (RISC) principles. Key features include:
 
@@ -61,7 +70,20 @@ This repo is created by Axat Gadhwal of grade 7th of APS Varanasi.
 
 <details>
   <summary>Lecture 3 - From software applications to Hardware</summary>
-  Hello
+
+  #### In this document, We will learn about how software applications convert into Hardware...
+
+  <br> When we click on the Software applications it gets converted into Binary digits because the computer only recognises two operations{0&1}.
+  <br> Understanding this line through a diagram...
+
+  <img src="https://private-user-images.githubusercontent.com/163879237/315209287-5e3fb422-7ca4-4657-b805-0d314d0deec7.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzgyNTA2NjgsIm5iZiI6MTczODI1MDM2OCwicGF0aCI6Ii8xNjM4NzkyMzcvMzE1MjA5Mjg3LTVlM2ZiNDIyLTdjYTQtNDY1Ny1iODA1LTBkMzE0ZDBkZWVjNy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMTMwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDEzMFQxNTE5MjhaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0zNzY2YmQxMzI4ZDEyMzQwNDVkYzUzZmJmYzM3MmU0NTYzYzJlOGNiZWJmZjgzOGRmMmRiOTZmNjAxMmZmODU2JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.MeGIVFFEr8aYzAmoOmrJ--o1pS-QRpU4kJuHj5vkozU">
+
+##### Understanding components of this process
+<br> 1. OPERATING SYSTEM => It is the main part of this process because all the things like compilers, assemblers, etc. are present in this. An operating system (OS) is system software that manages computer hardware and software resources, providing a stable environment for applications to run. It acts as an intermediary between users and the hardware, handling tasks like memory management, process scheduling, and device control. Examples include Windows, macOS, Linux, and Android.
+
+<br> 2. COMPILERS => A compiler is a software tool that translates high-level programming languages into machine code or intermediate code that a computer can execute. It processes the code through stages like analysis and optimization, enabling developers to write complex applications while abstracting hardware details.
+
+<br> 3. ASSEMBLER => An assembler is a software tool that converts assembly language into machine code, enabling a computer's processor to execute instructions. It translates human-readable mnemonics into binary instructions specific to a hardware architecture.
 </details>
 
 
@@ -70,7 +92,32 @@ This repo is created by Axat Gadhwal of grade 7th of APS Varanasi.
   <summary>Section 2 - Soc design and Openlane </summary>
 
    <details>
-  <summary>Lecture 1 - </summary>
+  <summary>Lecture 1 - Introduction to Components of Opensource Digital ASIC Design </summary>
+
+### Digital ASIC Design
+
+ Digital ASIC Design refers to the process of creating application-specific integrated circuits (ASICs) that perform digital functions. This design process involves several stages, from initial concept to final implementation, and is characterized by a focus on optimizing performance, power consumption, and area for specific applications.
+
+ ASIC requires mainly three components for design. The three components are :-
+
+ #### 1. RTL IPs (Register Transfer Level Intellectual Property)
+<br>Description: Pre-designed and verified blocks of code that represent specific functionalities at the RTL level.
+<br>Purpose: Accelerate the design process by providing reusable components, such as arithmetic units, memory controllers, and communication interfaces
+
+#### 2. EDA Tools (Electronic Design Automation Tools)
+<br>Description: Software tools used for various stages of the ASIC design process, including simulation, synthesis, place and route, and verification.
+
+#### 3. PDKs (Process Design Kits)
+
+<br>PDKs (Process Design Kits) are essential resources in the ASIC design process, providing the necessary information and tools for designing integrated circuits using a specific semiconductor manufacturing process.
+
+### Open Source Digital ASIC Design
+
+<img src =>
+
+
+<br>
+
 </details>
 
 </details>
