@@ -111,12 +111,27 @@ This repo is created by Axat Gadhwal of grade 7th of APS Varanasi.
 
 <br>PDKs (Process Design Kits) are essential resources in the ASIC design process, providing the necessary information and tools for designing integrated circuits using a specific semiconductor manufacturing process.
 
-### Open Source Digital ASIC Design
 
-<img src =>
+### Inventors
 
+Lynn Conway and Carver Mead are renowned for their groundbreaking work in very-large-scale integration (VLSI) chip design, which revolutionized the field starting in 1978. Their collaboration led to the development of simplified design methodologies that significantly advanced digital integrated circuit design and education. Their seminal textbook, Introduction to VLSI Systems, published in 1979, became a cornerstone in VLSI education, widely adopted by universities and instrumental in shaping the curriculum for electrical engineering and computer science students.
 
-<br>
+Conway and Mead's approach emphasized the separation of design from manufacturing, introducing simplified design rules and a timing model suitable for digital design, which allowed for more efficient and cost-effective chip production. Their innovations spurred the establishment of silicon foundries, enabling independent designers to fabricate custom chips, thus democratizing access to chip design and fostering a new wave of innovation in the semiconductor industry.
+
+The impact of their work was profound, leading to the rapid growth of VLSI technology and the emergence of numerous startups in Silicon Valley during the 1980s, which contributed to the ongoing evolution of the microelectronics landscape.
+
+#### Open Source Digital ASIC Design
+
+<img src ="https://github.com/Axat-Gadhwal/images/blob/main/ASIC%20design.png?raw=true" width ="500" height ="500">
+
+### What are PDKs?
+
+<br> A Process Design Kit (PDK) is a comprehensive set of files and documentation that provides essential resources for designing integrated circuits tailored to a specific semiconductor manufacturing process. It includes design rules, device models, layout templates, and simulation tools, enabling ASIC designers to create manufacturable layouts while ensuring compliance with fabrication standards. PDKs serve as critical toolkits that bridge the gap between design and manufacturing, facilitating accurate predictions of circuit behavior and optimizing the overall design process for reliable and efficient production.
+
+#### Open PDKs
+
+<br> We will now continue about How to open PDks files. 
+
 
 </details>
 
