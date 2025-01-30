@@ -132,6 +132,29 @@ The impact of their work was profound, leading to the rapid growth of VLSI techn
 
 <br> We will now continue about How to open PDks files. 
 
+<img src="https://github.com/Axat-Gadhwal/images/blob/main/Screenshot%20(177).png?raw=true" width="500" height="500">
+
+### Is 130nm old or not in use?
+
+<br>The 130nm technology is considered old and is largely not in use for modern microprocessors. It was developed in the early 2000s, and while some niche applications may still utilize it, most current microprocessors are manufactured using much smaller process nodes, such as 7nm or 5nm. However, the 130nm process technology is still relevant in certain contexts:
+
+<br>Educational Use: The SKY130 open-source Process Design Kit (PDK) utilizes the 130nm node, making it accessible for educational purposes and for new designers to learn chip design without the high costs associated with more advanced nodes.
+
+<br>Mixed-Signal Applications: The 130nm CMOS technology is recognized as a reliable option for mixed-signal applications, which require both analog and digital components. Its maturity and existing intellectual property (IP) make it a practical choice for specific designs.
+
+<br>Cost-Effectiveness: For low-volume production or specific applications where cutting-edge performance is not critical, the 130nm process can be more cost-effective compared to newer technologies.
+
+<br>Legacy Systems: Some existing systems and devices still rely on 130nm technology, and manufacturers may continue to support these products to ensure compatibility and maintenance.
+
+<br>In summary, while 130nm is considered an older technology in the context of cutting-edge microprocessors, it still finds utility in education, specific applications, and legacy systems.
+
+### Is 130nm fast?
+
+<br>130 nm chips are also not slow, as verified by intel and OSU-:
+
+<img src=
+
+
 
 </details>
 
