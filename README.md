@@ -1,7 +1,7 @@
 # Dcdc-Level3-Axat-Gadhwal
 This repo is created by Axat Gadhwal of grade 7th of APS Varanasi. 
 <details>
-  <summary style="font-size: 24 px; font-weight: bold;">Day 1</summary>
+  <summary>Day 1 - Inception of OpenSource EDA, OpenLANE and SKY130 PDK</summary>
  <details>
    <summary> Section 1 - How to talk to computers </summary>
   <details>
@@ -173,12 +173,146 @@ The impact of their work was profound, leading to the rapid growth of VLSI techn
 
 <img src="https://github.com/Axat-Gadhwal/images/blob/main/Screenshot%20(180).png?raw=true">
 
-<br>An RTL model, which stands for "Register Transfer Level" model, is a design abstraction used in digital circuit design to describe the behavior of a circuit by focusing on the flow of data between registers and the logical operations performed on that data
+<br>An RTL model, which stands for "Register Transfer Level" model, is a design abstraction used in digital circuit design to describe the behavior of a circuit by focusing on the flow of data between registers and the logical operations performed on that data:-
+
+<img src="https://github.com/Axat-Gadhwal/images/blob/main/CellLayout.png?raw=true">
+
+### Thank You. Because of the scarcity of time I was unable to do all assignments. So I am only doing Labs...
+</details>
+
+
+
+</details>
+
+<details><summary>Section 3 -Labs- Getting familiar to Open Source EDA Tools</summary>
+<details><summary>Lecture 1 - Openlane directory structure in detail</summary>
+
+#### First we should launch the Vsd Squadron file in the Virtual box. This interface will come...
+
+<img src="https://github.com/Axat-Gadhwal/images/blob/main/Screenshot%20(204).png?raw=true">
+
+Then search for the terminal. Because we are going to type all commands in terminal.
+
+##### So lets begin with Labs...
+
+##### Type cd Desktop and then cd work/tools to change directory to Desktop/work/tools, as this is where all openlane files are stored.
+
+<img src="https://github.com/Axat-Gadhwal/images/blob/main/Screenshot%20(182).png?raw=true">
+
+##### Using ls -ltr to know all the contents stored in that file
+
+###### ls -ltr lists files in long format, sorted by modification time, with the oldest files shown first.
+
+<img src="https://github.com/Axat-Gadhwal/images/blob/main/Screenshot%20(183).png?raw=true">
+
+#### In a VLSI design workshop, openlane_working_dir is the directory where all design files, synthesis results, place and route outputs, GDSII files, and logs are stored for a specific project, facilitating organization and management of the design process. We are firstly using the openlane_working_dir command and thence it will change the directory to Openlane...
+
+##### Also using ls -ltr to see the contents in the Openlane directory
+
+<img src="https://github.com/Axat-Gadhwal/images/blob/main/Screenshot%20(205).png?raw=true">
+
+#### Now going with the PDKs file. We will be also using ls -ltr to see the contents and also exploring SKY 130a...
+
+<img src="https://github.com/Axat-Gadhwal/images/blob/main/Screenshot%20(206).png?raw=true">
+
+#### Now changing the directory to the SKY 130A
+##### We will observe two files :- Libs.tech and Libs.ref{as seen in the figure below}
+###### We will be going through both these files...
+
+<img src="https://github.com/Axat-Gadhwal/images/blob/main/Screenshot%20(207).png?raw=true">
+
+##### libs.tech is a crucial file in the design flow of integrated circuits, serving as a technology library that encapsulates essential information about the semiconductor process being utilized. This file plays a significant role in ensuring that designs are compatible with the specific characteristics and constraints of the technology.
+
+<img src="https://github.com/Axat-Gadhwal/images/blob/main/Screenshot%20(208).png?raw=true">
+
+##### libs.ref is a file commonly used in the context of VLSI design and integrated circuit development. It serves as a reference library that provides essential information about the standard cells and components available in a specific technology library.
+
+###### Using cd ../ because it reverses the libs.tech directory and thus allowing us to change the directory to libs.ref
+
+<img src="https://github.com/Axat-Gadhwal/images/blob/main/Screenshot%20(209).png?raw=true">
+
+##### Now we will explore the "sky130_fd_sc_hd" directory
+###### ALso exploring the contents
+
+<img src="https://github.com/Axat-Gadhwal/images/blob/main/Screenshot%20(210).png?raw=true">
+
+##### Now we will open "OPENLANE" directory..
+###### Reversing back to the Openlane_working_dir file directory
+
+<img src="https://github.com/Axat-Gadhwal/images/blob/main/Screenshot%20(211).png?raw=true">
+
+
+
+
+</details>
+
+<details><summary>Lecture 2 - Design Preparation step</summary>
+
+  ### We will learn Design Preparation Step in this documentation...
+
+##### To open Openlane, we can use the docker command using interactive. After invoking the docker command, the prompt changes to bash-4.2$, and then one must type ls -lrth, and subsequently ./flow.tcl -interactive package require openlane 0.9 retrives all the required information for openlane.
+
+<img src="https://github.com/Axat-Gadhwal/images/blob/main/Screenshot%20(212).png?raw=true">
+
+##### As we learnt earier about the implemenation of The Risc-V program. Using PicoRV32A to ensure the functionality of OpenLane involves leveraging this RISC-V core as a reference design throughout the ASIC design flow. It allows users to synthesize the RTL code, perform place and route, and validate the effectiveness of OpenLane's tools. This practical implementation serves as both a demonstration of the design flow and an educational resource for understanding VLSI design methodologies.
+
+<img src="https://github.com/Axat-Gadhwal/images/blob/main/Screenshot%20(213).png?raw=true">
+
+#### folder run Jan 31_18-12 is created inside the picorv32a directory which contains the command log files, results, and the reports dumped of the various tool. The folder will be only have the lef files generated by this design setup stage. The cell LEF files .lef and technology LEF files .tlef merge to generate merged.lef inside runs/tmp/, wherein a a folder with today's date will be created, inside which a tmp folder will have contents, and the merged.lef folder will contain the merged lef files.
+
+<img src="https://github.com/Axat-Gadhwal/images/blob/main/Screenshot%20(214).png?raw=true">
+
+#### Now we are going to run the runs/ tmp directory
+
+##### Also we are going to see the contents
+
+<img src="https://github.com/Axat-Gadhwal/images/blob/main/Screenshot%20(215).png?raw=true">
+
+
+</details>
+
+<details><summary>Lecture 3 - Review Files After Design Prep and Run Synthesis</summary>
+
+## Coming back to the OPENLANE interactive
+
+#### Opening the merged.lef file through the less command after design prep will give one a document as shown:
+
+<img src="https://github.com/Axat-Gadhwal/images/blob/main/Screenshot%20(216).png?raw=true">
+
+<details><summary>Lecture 5 - Steps to Charecterise Synthesis Results</summary>
+
+#### after run synthesis ,printing statistics as shown below can be used to calculate flip-flops ratio
+
+###### Flip flop ratio =no of DFFs/no of cells *100
+
+<img src="https://github.com/Axat-Gadhwal/images/blob/main/Screenshot%20(217).png?raw=true">
+<img src="https://github.com/Axat-Gadhwal/images/blob/main/Screenshot%20(218).png?raw=true">
+
+#### Flop rate = 8.943%
+
+</details>
+
+</details>
+
+</details>
+
+</details>  
+
+<details><summary>Day 2 - Good vs Bad Floorplan and Introduction to Library Cells</summary>
+
+<details><summary>Section 1 - Chip Floor Planning Considerations</summary>
+
+<details><summary>Lecture 1 - Utilisation Factor and Aspect Ratio</summary>
+
+### In this document we will learn about How to define width and height of core and die
+
+#### The first step in physical design is to define the width and height of the core and die : Beginning with a very simple netlist, that can extrapolated later we will first draw a basic diagram in the form of symbols that we will later convert into physical designs. We will take each cell (gates, specific cell like flip flop) and give it a standard (although rough for now) dimensions. As an example here, each unit will be 1 unit x 1 unit - i.e. 1 sq. unit in size, and since there are 4 gates/flip-flops here, the total size of the silicon wafer will 4 sq. units.
+
+
+
 </details>
 
 
 </details>
 
-
-  
- </details>  
+</details>
