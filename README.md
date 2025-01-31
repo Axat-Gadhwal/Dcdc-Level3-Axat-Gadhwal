@@ -304,15 +304,285 @@ Then search for the terminal. Because we are going to type all commands in termi
 
 <details><summary>Lecture 1 - Utilisation Factor and Aspect Ratio</summary>
 
-### In this document we will learn about How to define width and height of core and die
+### In these series document we will learn about How to define width and height of core and die
 
 #### The first step in physical design is to define the width and height of the core and die : Beginning with a very simple netlist, that can extrapolated later we will first draw a basic diagram in the form of symbols that we will later convert into physical designs. We will take each cell (gates, specific cell like flip flop) and give it a standard (although rough for now) dimensions. As an example here, each unit will be 1 unit x 1 unit - i.e. 1 sq. unit in size, and since there are 4 gates/flip-flops here, the total size of the silicon wafer will 4 sq. units.
 
+<img src="https://github.com/Axat-Gadhwal/images/blob/main/Screenshot%20(219).png?raw=true">
+ 
+ ##### Utilisation factor = 50 %
+
+###### Aspect Ratio = 2 : 4 = 1 : 2 = .5
+
+
+
+</details>
+
+<details><summary>Lecture 2 - Concept of Pre-Placed Cells</summary>
+
+#### Pre-Placed cells are complex logic blocks that can be reused. They are already implemented and cannot be touched by Auto Place and Route tools - and hence are required to be very well designed. Placement of such cells are user-based. A combinational logic - such as netlist shown does a particular function and is composed of various gates. We can divide this logic into blocks - while preserving the connectivity of the logic. By extending IO pins and making connections we can convert the logic into two parts - that are blackboxed and can be used as needed. If a design only requires a black box, it can be directly handed over to the designer with out much hassle. The various preplaced blocks available include memory, clock-gating cell, comparator, MUX. The arrangement of these IPs in a chip are known as floorplanning.
+
+## Beacause of lack of time I was unable to do assignments.
+
+
+
+
+
+
+
+</details>
+
+<details><summary>Lecture 7 - Steps to Run Floorplan Using OpenLANE</summary>
+
+### In this document we will be going to learn how to run Floorpan files using OpenLANE
+
+#### The first step is setting the configuration variables - Before running floorplan, the configuration variables or switches must be set. These are present in openlane/configuration
+
+<img src="https://github.com/Axat-Gadhwal/images/blob/main/Screenshot%20(226).png?raw=true">
+
+The README.md contains all configuration variables, which are segregated based on stage and the .tcl files consists of the default OpenLANE settings.
+
+  All configurations/switches accepted by the current run are from openlane/designs/[design - date]/config.tcl
+
+There is a order of priority -:
+
+openlane/designs/[design-date]/sky130A_sky130_fd_sc_hd_config.tcl
+openlane/designs/[design]/config.tcl
+openlane/configuration/floorplan.tcl
+
+####  In OpenLANE, it is important to note that the vertical and horizontal metals set one more than what we specify. For example, if the vertical metal is specified as 3, then it'll be 4.
+
+###### Floorplan is to be run on OpenLANE through the command :- run_floorplan
+
+#### Review Floorplan Files and Steps to Review Floorplan
+
+##### After running floorplan as above, it will produce a result that will be stored in the form of a design exchange format - and will contain the area of the Die as well as positions.The die area in this file is in database units and 1 micron is equivalent to 1000 database units. Area of die = (554570/1000) microns * (565290/1000) microns = 311829.1653 sq. µm.
+
+
+
+</details>
+
+<details><summary>Lecture 7 - Review Floorplan Layout in Magic</summary>
+
+
+##### The command magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def & should be typed to view the file.
+  
+##### Subsequently, press the S key to select the entire die and then V to center the view, and then Z to zoom. You will observe that the IO pins are placed equidistant to one another in a random mode as based on the configuration (FP_IO_MODE = 1) set in openlane/configuration/floorplan.tcl
+
+<img src="https://github.com/Axat-Gadhwal/images/blob/main/316248606-d38b08d1-e7ca-4138-b10d-1c31b0ffc6d7.png?raw=true">
+
+#### after this, typing what on the tkcon window will give the layer of the selection.
+
+<img src="https://github.com/Axat-Gadhwal/images/blob/main/hlo.png?raw=true">
+
+###### Standard cells are not placed but can be viewed at the bottom left corner of the layout
+
+<img src="https://github.com/Axat-Gadhwal/images/blob/main/Magic.png?raw=true">
+
+
+
+</details>
+
+</details>
+<details><summary>Section 2 - Library Binding and Placement</summary>
+
+<details><summary> Lecture 1 - Netlist Binding and Initial Place Design</summary>
+
+
+### The first step is to bind the netlist with physical cells i.e. cells with real dimension. The netlist contains various gates, that while in the schematic are of a certain shape as depicted, are usually square/rectangular in shape in production. These gates are given a specific shape, and in the end look very different from the netlist.
+
+##### These blocks are sourced from a "shelf", known as a library. The library has cells with various shapes, dimensions and also contains information about the delay information. The library contains various sizes of cells with the same functionality too - since bigger cells have lesser resistance
+
+<img src="https://github.com/Axat-Gadhwal/images/blob/main/vlsi.png?raw=true">
+
+###### The second step is PLACEMENT, which is done based on connectivity. As can be seen, flip flop 1 is close to the Din1 pin and flip flop 2 is close to Dout1 pin. Combinational cells are placed in close proximity to FF1 and FF2 as to reduce delay.
+
+<img src="https://github.com/Axat-Gadhwal/images/blob/main/Gates.png?raw=true">
+
+
+
+
+</details>
+
+<details><summary>Lecture 2 - Optimise Placement Using Estimated Wire-Length and Capacitance</summary>
+
+#### Here, we will estimate wirelength needed to connect the components together. If the wirelength is too long, we would need to install repeaters, as the signal may change over a long distance. Repeaters essentially recondition the same signal to it's prior strength.
+
+</details>
+
+<details><summary>Lecture 3 - Final Placement Optimization</summary>
+
+<img src="https://github.com/Axat-Gadhwal/images/blob/main/316286165-0941c315-195a-43f7-89aa-70e5e3215443.png?raw=true">
+
+
+</details>
+
+<details><summary>Lecture 4 - Congestion Aware Placement Using RePLACE</summary>
+
+#### The command to run placement of OpenLANE - run_placement is a wrapper which does three functions
+<br> Global Placement (by using the RePlace tool) - there is no legalisation and HPWL reduction model is used
+<br> Optimization (by Resier tool)
+<br> Detailed Placement (by OpenDP tool) - legalisation occurs - where standard cells are placed in rows and there will be no overlap of the cells.
+
+#### Placement aims to converge the overflow value.
+
+ ###### NOTE: If placement will be sucessful and the designs will converge, the overflow value will progressively reduce during the placement.
+
+#### After running the placement, output is generated in this folder openlane/designs/picorv32a/runs/[design - date]/results/placement/picorv32a.placement.def
+
+#### Then, we can type the command : magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def & to view it in Magic:
+
+<img src="https://github.com/Axat-Gadhwal/images/blob/main/316289792-6f53eb50-d3f1-4d6c-91c2-7e35f35d423d.png?raw=true">
+
+
+
+
+
+
+</details>
+
+
+
+  
+</details>
+
+<details><summary>Section 3 - Cell Design and Characterisation Parameters </summary>
+
+<details><summary> Inputs for Cell Design Flow and Circuit and Layout Design Step</summary>
+
+#### Standard cells - for example AND gate, OR gate, BUFFER etc are stored in the standard cell library. There are various types of cells in the library with various variations as well - in drive strengths, functionality, and voltages. For a greater cell size, there is greater drive strength for longer wires. If there is high Vth, then it will take more time to switch than a lesser threshhold voltage cell.
+
+#### The standard cell design flow is as follows:-
+
+<br>INPUTS (PDKS : DRC and LVS rules, SPICE models, library and user defined specs)
+
+<br>PROCESSES (circuit, layout design and charecterisation)
+
+<br>OUTPUTS (Circuit Description Language, GDSII, lef, timing, noise etc)
+
+
+<br>DRC & LVS Rules contain tech files and poly substrate parameters
+
+<br>SPICE Models contain threshold, linear regions, saturation region equations with added foundry parameters, including NMOS and PMOS parameters
+
+<br>User defined specifications include cell height and cell width, supply voltage, pin locations, and metal layer requirement
+
+<br>IMPORTANT: The standard cell library developer must adhere to the rules given by the foundry so that when the cell can be used on a real design without any errors
+
+<br>Circuit design is done by modeling the pmos and nmos to meet input library requirement
+
+<br>Layout design is done using Euler's path and stick diagram on Magic layout tool
+
+<img src="https://github.com/Axat-Gadhwal/images/blob/main/316299381-b94b535f-ebd1-4b8a-bd36-f649fb6a753f.png?raw=true">
+
+### Typical Characterisation Flow:-
+
+#### Steps of Characterisation Flow:-
+
+<br>Reading of SPICE module files
+<br>Reading of netlist extracted by SPICE
+<br>Recognising buffer behaviour
+<br>Reading subcircuits
+<br>Attaching neccessary power sources
+<br>Applying stimulus
+<br>Provision of of neccessary output capacitance
+<br>Provision of simulation command
+
+ ##### These steps are given to the CHARECTERISATION SOFTWARE KNOWN AS GUNA in the form of a configuration file, which will generate timing, noise and power models in the form of .libs files.
+ 
+</details>
+
+
+
+
+
+</details>
+
+<details><summary> Section 4 - General Timing Characterisation Parameters</summary>
+
+<details><summary>Lecture 1 - Timing Threshhold Definitions</summary>
+
+
+#### Here, we will talk about the semantics of the various .libs files generated by GUNA. To do this, we will take this circuit as an example:
+
+<img src="https://github.com/Axat-Gadhwal/images/blob/main/316299824-0ed894da-ff96-46f5-8e9e-3b3271884568.png?raw=true">
+
+##### Here, the red line is output of first inverter and blue is output of second inverter.
+
+<img src="https://github.com/Axat-Gadhwal/images/blob/main/316299987-07cc3660-34e2-4446-8d50-97599d213504.png?raw=true">
+
+<img src="https://github.com/Axat-Gadhwal/images/blob/main/316299979-198064dc-3dd9-4bf5-aa52-d0012d7544f9.png?raw=true">
+
+<img src="https://github.com/Axat-Gadhwal/images/blob/main/z316300124-aa2d9663-c41d-45df-b74e-de6f4bd2de86z.png?raw=true">
+
+
+
+</details>
+
+<details><summary>Lecture 2 - Propogation Delay and Transition Time</summary>
+
+#### Propogation delay is calculated as = time(out_x_thr) - (time_x_thr). If the propogation delay is negative, it can cause quite unexpected results - as an output is generated before the input. Hence, threshhold values should be selected properly. Delay threshold is usually 50% and slew rate threshold is usually 20%-80%.
+
+#### **Transition time is calculated as = time(slew_high_x_thr) - time(slew_low_x_thr)**
+
+<img src="https://github.com/Axat-Gadhwal/images/blob/main/316300510-68f7dbf3-b2e1-4be0-977c-6a6ef80f69b6.png?raw=true">
+
+
+
+
+
+
+
+
+</details>
+
 
 
 </details>
 
 
 </details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </details>
