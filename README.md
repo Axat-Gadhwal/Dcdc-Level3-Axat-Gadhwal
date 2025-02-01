@@ -76,7 +76,7 @@ This repo is created by Axat Gadhwal of grade 7th of APS Varanasi.
   <br> When we click on the Software applications it gets converted into Binary digits because the computer only recognises two operations{0&1}.
   <br> Understanding this line through a diagram...
 
-  <img src="https://private-user-images.githubusercontent.com/163879237/315209287-5e3fb422-7ca4-4657-b805-0d314d0deec7.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzgyNTA2NjgsIm5iZiI6MTczODI1MDM2OCwicGF0aCI6Ii8xNjM4NzkyMzcvMzE1MjA5Mjg3LTVlM2ZiNDIyLTdjYTQtNDY1Ny1iODA1LTBkMzE0ZDBkZWVjNy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMTMwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDEzMFQxNTE5MjhaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0zNzY2YmQxMzI4ZDEyMzQwNDVkYzUzZmJmYzM3MmU0NTYzYzJlOGNiZWJmZjgzOGRmMmRiOTZmNjAxMmZmODU2JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.MeGIVFFEr8aYzAmoOmrJ--o1pS-QRpU4kJuHj5vkozU">
+<img src ="content://media/external/downloads/1000616466">
 
 ##### Understanding components of this process
 <br> 1. OPERATING SYSTEM => It is the main part of this process because all the things like compilers, assemblers, etc. are present in this. An operating system (OS) is system software that manages computer hardware and software resources, providing a stable environment for applications to run. It acts as an intermediary between users and the hardware, handling tasks like memory management, process scheduling, and device control. Examples include Windows, macOS, Linux, and Android.
